@@ -1,0 +1,9 @@
+import requests
+
+url = "http://127.0.0.1:5000/usuarios/11" # Alterando o usuário com ID 11
+dados = {"nome": "Ana Maria", "email": "ana.silva@email.com"}
+res = requests.put(url, json=dados)
+
+# Se o status code for 200, significa que o usuário foi alterado com sucesso
+print(res.status_code)  
+print(res.json())

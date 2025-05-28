@@ -1,0 +1,7 @@
+import requests
+
+res = requests.delete("http://127.0.0.1:5000/usuarios/11") # Deletando o usuário com ID 11
+
+# Se o status code for 200, significa que o usuário foi excluído com sucesso
+print(res.status_code) 
+print(res.json())
